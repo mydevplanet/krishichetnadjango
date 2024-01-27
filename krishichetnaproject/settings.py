@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-6av6w48gx1^#p#)u5%=0h1krlj=!ukqlc8gg_j#ryl@n3_k0m@
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = False
 DEBUG=True
-ALLOWED_HOSTS = ['127.0.0.1', 'www.krishichetna.com', 'krishichetna.com', 'localhost', 'https://www.krishichetna.com/']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -77,18 +77,18 @@ WSGI_APPLICATION = 'krishichetnaproject.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': BASE_DIR / 'db.sqlite3',
-    # },
-     "default": {
-        "ENGINE": "django.db.backends.mysql",
-        "NAME": os.environ.get('DB_NAME'),
-        "USER": os.environ.get('DB_USER'),
-        "PASSWORD": os.environ.get('DB_PASSWORD'),
-        "HOST": "localhost",
-        "PORT": "3306",
-    }
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    },
+    #  "default": {
+    #     "ENGINE": "django.db.backends.mysql",
+    #     "NAME": os.environ.get('DB_NAME'),
+    #     "USER": os.environ.get('DB_USER'),
+    #     "PASSWORD": os.environ.get('DB_PASSWORD'),
+    #     "HOST": "localhost",
+    #     "PORT": "3306",
+    # }
 }
 
 
@@ -128,7 +128,7 @@ MEDIA_ROOT = BASE_DIR / "media"
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR/ 'staticfiles'
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
@@ -136,6 +136,6 @@ STATIC_ROOT = BASE_DIR/ 'staticfiles'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STATICFILES_DIRS=[
-    BASE_DIR, 'static'
+    BASE_DIR/ 'static'
 ]
 
