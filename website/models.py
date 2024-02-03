@@ -29,3 +29,31 @@ class Event(models.Model):
 
     def __str__(self):
         return self.event_name
+
+class Feature(models.Model):
+    featured_image=models.ImageField(upload_to='feature/')
+    feature_name=models.CharField(max_length=200)
+    feature_heading=models.CharField(max_length=200)
+    feature_content=models.TextField()
+
+    def __str__(self):
+        return self.feature_name
+
+class Product(models.Model):
+    product_image=models.ImageField(upload_to='products')
+    product_name=models.CharField(max_length=200)
+    product_price=models.FloatField()
+    product_short_description=models.CharField(max_length=500)
+    product_description=models.TextField()
+
+    def __str__(self):
+        return self.product_name
+
+class Feedback(models.Model):
+    feedback_image=models.ImageField(upload_to='feedbacks')
+    feedback_name=models.CharField(max_length=200)
+    feedback_profession=models.CharField(max_length=500)
+    feedback_description=models.TextField()
+
+    def __str__(self):
+        return self.feedback_name

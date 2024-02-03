@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Slide, About, Event
+from .models import Slide, About, Event, Feature, Product, Feedback
 from django.db import models
 
 # class AboutAdmin(admin.ModelAdmin):
@@ -25,3 +25,6 @@ from django.db import models
 admin.site.register(Slide)
 admin.site.register(Event)
 admin.site.register(About)
+admin.site.register(Feature)
+admin.site.register(Feedback)
+admin.site.register(Product)
