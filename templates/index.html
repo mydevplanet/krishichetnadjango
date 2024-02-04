@@ -191,10 +191,10 @@
         <div class="container py-5">
             <div class="section-title text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
                 <p class="fs-5 fw-medium fst-italic text-white">Testimonial</p>
-                <h1 class="display-6">What our clients say about our tea</h1>
+                <h1 class="display-6">What our clients say about our Products</h1>
             </div>
-            {% for feedback in feedbacks %}
             <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.5s">
+            {% for feedback in feedbacks %}
                 <div class="testimonial-item p-4 p-lg-5">
                     <p class="mb-4">{{feedback.feedback_description}}</p>
                     <div class="d-flex align-items-center justify-content-center">
@@ -206,8 +206,8 @@
                     </div>
                 </div>
 
-            </div>
             {% endfor %}
+            </div>
         </div>
     </div>
     <!-- Testimonial End -->
