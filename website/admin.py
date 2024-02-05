@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Slide, About, Event, Feature, Product, Feedback
+from .models import Slide, About, Event, Feature, Product, Feedback, Partners
 from django.db import models
 
 # class AboutAdmin(admin.ModelAdmin):
@@ -28,3 +28,4 @@ admin.site.register(About)
 admin.site.register(Feature)
 admin.site.register(Feedback)
 admin.site.register(Product)
+admin.site.register(Partners)

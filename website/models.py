@@ -57,3 +57,6 @@ class Feedback(models.Model):
 
     def __str__(self):
         return self.feedback_name
+
+class Partners(models.Model):
+    partner_image=models.ImageField(upload_to='partners')

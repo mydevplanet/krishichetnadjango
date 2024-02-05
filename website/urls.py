@@ -21,4 +21,11 @@ from . import views
 urlpatterns = [
     path('', views.home, name="home"),
     path('about', views.about, name="about"),
+    path('product', views.product, name="product"),
+    path('store', views.store, name="store"),   
+    path('contact', views.contact, name="contact"),   
+    path('feature', views.feature, name="feature"),   
+    path('article', views.article, name="article"),   
+    path('testimonial', views.testimonial, name="testimonial"),   
+ 
 ]

@@ -1,0 +1,26 @@
+    <div class="container-fluid product py-5 my-5">
+        <div class="container py-5">
+            <div class="section-title text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <p class="fs-5 fw-medium fst-italic text-primary">Our Partners</p>
+                {% comment %} <h1 class="display-6">Actively Participating in many events</h1> {% endcomment %}
+            </div>
+            <div class="owl-carousel product-carousel wow fadeInUp" data-wow-delay="0.5s">
+                {% for partner in partners %}
+                    <a href="" class="d-block rounded">
+                        {% comment %} <img src="{{partner.partner_image.url}}" alt="" width="30px">
+                         {% endcomment %}
+                         <img class="img-fluid flex-shrink-0" src="{{partner.partner_image.url}}" alt="">
+                        {% comment %} <div class="bg-white shadow-sm text-center p-4 position-relative mt-n5 mx-4">
+                            <h4 class="text-primary">{{event.event_name}}</h4>
+                            <span class="text-body">{{event.event_des}} </span>
+                        </div> 
+                        <div class='text-center'>
+                            <span class="btn btn-primary rounded-pill mt-4 py-3 px-5">Read More</span>
+                        </div>    
+                        {% endcomment %}
+                    </a>
+            
+                {% endfor %}
+            </div>
+        </div>
+    </div>
