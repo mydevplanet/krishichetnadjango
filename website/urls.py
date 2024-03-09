@@ -23,9 +23,10 @@ urlpatterns = [
     path('about', views.about, name="about"),
     path('product', views.product, name="product"),
     path('store', views.store, name="store"),   
-    path('contact', views.contact, name="contact"),   
+    path('contact', views.inquiry_view, name="contact"),   
     path('feature', views.feature, name="feature"),   
     path('article', views.article, name="article"),   
     path('testimonial', views.testimonial, name="testimonial"),   
+    path('inquiry/', views.inquiry_view, name='inquiry_view'),
  
 ]

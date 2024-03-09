@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Event, Partners, Feedback, Slide, About, Feature, Product
+from .forms import InquiryForm
 # Create your views here.
 
 def home(request):
@@ -44,4 +45,14 @@ def article(request):
 
 def testimonial(request):
     return render(request, 'pages/testimonial.html', {})
+
+def inquiry_view(request):
+    if request.method == 'POST':
+        form = InquiryForm(request.POST)
+        if form.is_valid():
+            pass
+    else:
+        form = InquiryForm()
+
+    return render(request, 'pages/contact.html', {'form': form})
 
