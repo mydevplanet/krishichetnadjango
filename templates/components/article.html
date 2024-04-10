@@ -1,5 +1,6 @@
  <div class="container-xxl py-5">    
         <div class="container">
+            {% if features %}
         {% for feature in features%}
             <div class="row g-5">
                 <div class="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
@@ -16,4 +17,5 @@
             </div>
         </div>
         {% endfor %}
+        {% endif %}
     </div>
